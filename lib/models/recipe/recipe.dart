@@ -18,10 +18,10 @@ class Recipe {
   /// A JSON objektumnak a következő kulcsokat kell tartalmaznia:
   factory Recipe.fromJson(Map<String, dynamic> json) {
     return Recipe(
-      id: json['idMeal'],
-      title: json['strMeal'],
-      description: json['strInstructions'],
-      imageUrl: json['strMealThumb'],
+      id: json['id'].toString(),
+      title: json['name'],
+      description: json['description'] ?? '',
+      imageUrl: json['thumbnail_url'],
     );
   }
 }
